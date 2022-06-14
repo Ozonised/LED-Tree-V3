@@ -11,7 +11,7 @@ Well the Arduino UNO based LED-Tree had several shortcomings:
 3. Insufficient number of shift regsiter
 4. Coarse animation
 5. Very few effects
-6. In my opinion, the Arduino was an overkill for this project
+6. In my opinion, the Arduino UNO was an overkill for this project
 
 
 # Features:
@@ -19,9 +19,9 @@ To mitigate the mentioned above issues, I created V3. It's features are listed b
 1. Added a switch to toggle through the effects
 2. Potentiometer to control the brightness
 3. 4 shift register as compared to 2 in the previous version
-4. As a result of the increased number of shift register and LEDs, the animations wihtout a doubt are a lot smoother
+4. As a result of the increased number of shift register and LEDs, the animations without a doubt are a lot smoother
 5. Currently it has 11 effects but not limited to 11
 6. Switched the ATmega328p of the Arduino UNO with an ATmega8A
 
 # Drawbacks:
-So far the only drawback I can think of is that it only has 11 effects. This is an improvement over the previous version but definitely not it's limit. My creativity skill is equivalent to that of an infant but not yours(hopefully). I can use some of your imaginations to come up with some effects. Let me know if you are interested.
+So far the only drawback I can think of is that it only has 11 effects. This is an improvement over the previous version but definitely not it's limit. My creativity skills are equivalent to that of an infant but not yours(hopefully). I can definitely use some of your imaginations to come up with newer and mesmerising effects. Let me know if you are interested.
