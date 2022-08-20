@@ -34,7 +34,7 @@ Version 3 is a major improvement over version 2 but that doesn't mean it's perfe
 The latter is the one that bothered me the most. So to overcome this, I came up Version 4 which doesn't bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around ```HT4928S``` mobile power supply management chip, with a lithium ion cell to power the project.
 
 # Part Lists:
-## Part lists for Version 3:
+## Part list for V3:
 |   | Component | Quantity |
 | - | --------- | :------: |
 | 1.| Atmega8A  | 1 |
