@@ -33,7 +33,7 @@ Version 3 is a major improvement over version 2 but that doesn't mean it's perfe
 2. It always needs to be powered either by a wall adapter or a powerbank.
 
 # LED-TREE-V4
-The latter is the one that bothered me the most. So to overcome this, I came up Version 4 which doesn't bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around ```HT4928S``` mobile power supply management chip, with a lithium ion cell to power the project.
+The latter is the one that bothered me the most. So to overcome this, I came up Version 4 which doesn't bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around [HT4928S](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwji78mUqNj5AhXU6jgGHemCBBEQFnoECAYQAw&url=https%3A%2F%2Fwww.mikrocontroller.net%2Fattachment%2F480367%2FHT4928S-HOTCHIP_EN.pdf&usg=AOvVaw0lIInGk0nGiufScK4jM46i) mobile power supply management chip, with a lithium ion cell to power the project.
 
 # Part Lists:
 ## Part list for V3:
