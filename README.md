@@ -31,6 +31,8 @@ To mitigate the mentioned above issues, I created V3. It's features are listed b
 Version 3 is a major improvement over version 2 but that doesn't mean it's perfect. There are 2 drawbacks that I would like to mention.
 1. It only has 11 effects. This is an improvement over the previous version but definitely not it's limit. My creativity skills are equivalent to that of an infant but not yours(hopefully). I can definitely use some of your imaginations to come up with newer and mesmerising effects. Let me know if you are interested.
 2. It always needs to be powered either by a wall adapter or a powerbank.
+
+# LED-TREE-V4
 The latter is the one that bothered me the most. So to overcome this, I came up Version 4 which doesn't bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around ```HT4928S``` mobile power supply management chip, with a lithium ion cell to power the project.
 
 # Part Lists:
