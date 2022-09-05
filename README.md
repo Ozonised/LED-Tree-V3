@@ -33,7 +33,7 @@ Version 3 is a major improvement over version 2 but that doesn't mean it's perfe
 2. It always needs to be powered either by a wall adapter or a powerbank.
 
 # LED-TREE-V4
-The latter is the one that bothered me the most. So to overcome this, I came up Version 4 which doesn't bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around [HT4928S](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwji78mUqNj5AhXU6jgGHemCBBEQFnoECAYQAw&url=https%3A%2F%2Fwww.mikrocontroller.net%2Fattachment%2F480367%2FHT4928S-HOTCHIP_EN.pdf&usg=AOvVaw0lIInGk0nGiufScK4jM46i) mobile power supply management chip, with a lithium ion cell to power the project.
+The latter is the one that bothered me the most. So to overcome this, I came up Version 4. This version does not bring any software changes but resolves the issue with it being always connected to a powerbank or a wall adapter. I did so by using one of those 3.7 volt to 5 volt power bank modules, based around [HT4928S](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwji78mUqNj5AhXU6jgGHemCBBEQFnoECAYQAw&url=https%3A%2F%2Fwww.mikrocontroller.net%2Fattachment%2F480367%2FHT4928S-HOTCHIP_EN.pdf&usg=AOvVaw0lIInGk0nGiufScK4jM46i) mobile power supply management chip, with a lithium ion cell to power the project.
 
 # Part Lists:
 ## Part list for V3:
@@ -66,3 +66,14 @@ The latter is the one that bothered me the most. So to overcome this, I came up 
 | 22.| 3.7 to 5 volt power bank module | 1 |
 | 23.| SPST switch | 1 |
 | 24.| lithium ion cell | 1 |
+
+# Setting Up ATmega 8
+I did not burn a bootloader into the microncontroller so it cannot be programmed through the serial port. So it must be programmed through the ICSP headers via the Serial Peripheral Interface(SPI). To do so, you need an AVR ISP programmer like USBASP or ATmel ICE but a cheaper solution would be to use an Arduino UNO or a Nano as an ISP programmer(this is what I used). 
+By default the ATmega 8 uses its internal 8 MHz RC oscillator with a prescaler of 8 which equates to a sytem clock frequency of 1 MHz which is rather slow. However for this project, we will be running it at 8 MHz. So follow the steps listed below to configure the microcontroller: 
+
+1. Download and install AVRDude. AVRDude is the program used by Arduino IDE and PlatformIO to upload your code to an AVR microcontroller.
+2. Open up the Arduino IDE, select ```ArduinoISP``` under File/Examples/ and hit upload.
+3. Wire up the Arduino and ATmega8 as shown in the schematic:
+4. By default, the low fuse of the ATmega8 is set to 0xE1. This must be set to 0xE4 to configure the microcontroller to run at 8MHz. Type ``` avrdude -c stk500v1  -P COM5 -p atmega8 -b 19200 -U lfuse:w:0xe4:m -U hfuse:w:0xd9:m ```. Alternatively, you can use an online [AVR fuse bit calculator](https://www.engbedded.com/fusecalc/) for your selected microcontroller.
+### Note: 
+The ```-P <port>```argument specifies the connection port. In my case, the arduino is connected to ```COM5``` and hence the argument ```-P COM5```.
