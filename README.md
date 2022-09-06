@@ -1,6 +1,6 @@
 # LED-Tree-V3
 ![LED Tree](/Images/Led-tree.jpg)
-LED-Tree-V3 is the successor to my [Arduino UNO based LED-Tree](https://youtu.be/-E3FYhSJXbc). It is built around the ATmega8A microcontroller by Microchip. 
+[LED-Tree-V3](https://youtu.be/tDnKHj7r4Kc) is the successor to my [Arduino UNO based LED-Tree](https://youtu.be/-E3FYhSJXbc). It is built around the ATmega8A microcontroller by Microchip. 
 
 # Inspiration
 The original inspiration for this project came from GreatScott's [3D LED Christmas tree](https://www.youtube.com/watch?v=Ya9RpvQyww4&t=0s). I really liked his idea and wanted to improve upon his project. The first verison I made was completely analog and based on the infamous ne555 and Cd4017 based knight rider circuit. You can watch it's build video [here](https://www.youtube.com/watch?v=1S3l5N7w0WI). One of the drawbacks with this verison was that it only had 1 effect. So to alleviate this issue, I made V2 using an Arduino UNO.
