@@ -77,3 +77,5 @@ By default the ATmega 8 uses its internal 8 MHz RC oscillator with a prescaler o
 4. By default, the low fuse of the ATmega8 is set to 0xE1. This must be set to 0xE4 to configure the microcontroller to run at 8MHz. Type ``` avrdude -c stk500v1  -P COM5 -p atmega8 -b 19200 -U lfuse:w:0xe4:m -U hfuse:w:0xd9:m ```. Alternatively, you can use an online [AVR fuse bit calculator](https://www.engbedded.com/fusecalc/) for your selected microcontroller. ![Changing lfuse](/Images/Changing-fuse-bits.png)
 ### Note: 
 The ```-P <port>```argument specifies the connection port. In my case, the arduino is connected to ```COM5``` and hence the argument ```-P COM5```. For ```-p <partno>``` either ```-p m8``` or ```-p atmega8``` can be used. Refer this [guide](https://www.ladyada.net/learn/avr/avrdude.html) for more information.
+
+5. That is all. The ATmega8 is now ready to be programmed with PlatformIO using the arduino as an ISP programmer.
